@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Best Fleet Fuel Card Program | Save Up to 30% on Fuel Costs</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The most comprehensive fleet fuel card solution for businesses of all sizes. Save 5-30¢ per gallon, control spending, access advanced analytics and compare top fuel cards and apply online today.">
+
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,86,179,0.9), rgba(0,86,179,0.8)), url('https://example.com/fuel-truck.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b00;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #e05d00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        /* Content Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            color: #0056b3;
+            font-size: 2.3rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ff6b00;
+        }
+        
+        h3 {
+            color: #333;
+            margin: 35px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #0056b3;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background-color: #0056b3;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f1f7ff;
+        }
+        
+        .highlight {
+            background-color: #fff8e6 !important;
+            font-weight: bold;
+        }
+        
+        .testimonial-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(0,86,179,0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            margin-top: 20px;
+            color: #0056b3;
+        }
+        
+        .testimonial-company {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .stat-item {
+            padding: 30px 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .faq-section {
+            background-color: #f8f9fa;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .benefits-list {
+            margin: 30px 0;
+            padding-left: 20px;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            position: relative;
+            list-style-type: none;
+            padding-left: 30px;
+        }
+        
+        .benefits-list li:before {
+            content: '?';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .application-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #0056b3;
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .feature-card, .testimonial, .faq-item {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Policies</div>
+            <nav>
+              
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Terms Of use</h1>
+                <p><strong>Effective Date: March 25, 2025</strong></p>
+  <p>Welcome to <strong>Fuel Master</strong> ("we", "our", or "us"). By accessing or using our website at <a href="https://fuel-master.com">https://fuel-master.com</a> ("Site"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use the Site.</p>
+
+  <h2>1. Use of the Site</h2>
+  <p>You may use this Site for lawful purposes only. You agree not to use the Site in any way that violates applicable laws or regulations, or that infringes on the rights of others.</p>
+
+  <h2>2. Intellectual Property</h2>
+  <p>All content on this Site, including text, graphics, logos, images, and software, is the property of Fuel Master or its content suppliers and is protected by copyright, trademark, and other intellectual property laws. You may not copy, reproduce, distribute, or create derivative works without our express written permission.</p>
+
+  <h2>3. User Submissions</h2>
+  <p>Any information or materials you submit through the Site, including contact forms or emails, are considered non-confidential. By submitting content, you grant us the right to use, reproduce, and display it as necessary to provide our services.</p>
+
+  <h2>4. Disclaimer</h2>
+  <p>The Site is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not guarantee that the Site will be error-free, secure, or continuously available.</p>
+
+  <h2>5. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, Fuel Master shall not be liable for any damages arising from your use or inability to use the Site, including indirect, incidental, or consequential damages.</p>
+
+  <h2>6. Third-Party Links</h2>
+  <p>Our Site may contain links to third-party websites. We are not responsible for the content, accuracy, or practices of those sites. Your use of third-party websites is at your own risk.</p>
+
+  <h2>7. Changes to the Terms</h2>
+  <p>We reserve the right to modify these Terms of Use at any time. Any changes will be posted on this page with a new effective date. Your continued use of the Site after changes are made constitutes acceptance of the new terms.</p>
+
+  <h2>8. Governing Law</h2>
+  <p>These Terms of Use shall be governed by and construed in accordance with the laws of the jurisdiction in which Fuel Master operates, without regard to its conflict of law provisions.</p>
+
+  <h2>9. Contact Us</h2>
+  <p>If you have any questions about these Terms of Use, please contact us at: <strong><a href="mailto:sales@fuel-master.com">sales@fuel-master.com</a></strong></p>
+
+        </div>
+    </section>
+    
+    <section id="features" class="container">
+        <div class="section-title">
+            <h2>Terms Of Use</h2>
+               
+        </div>   
+        </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Vehicle Fleet Fueling</h3>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#savings">Savings Calculator</a></li>
+                        <li><a href="#compare">Compare Cards</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#apply">Apply Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Fuel Management Guide</a></li>
+                        <li><a href="#">Fleet Efficiency Tips</a></li>
+                        <li><a href="#">Industry Reports</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="+1-800-FUEL-CARD">1-800-FUEL-CARD</a></li>
+                        <li><a href="mailto:">sales@fuel-master.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Vehicle Fleet Fueling. All rights reserved. | <a href="privacy-policy.html" style="color: #aaa;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #aaa;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

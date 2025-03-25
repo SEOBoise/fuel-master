@@ -1,1 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Best Fleet Fuel Card Program | Save Up to 30% on Fuel Costs</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The most comprehensive fleet fuel card solution for businesses of all sizes. Save 5-30¢ per gallon, control spending, access advanced analytics and compare top fuel cards and apply online today.">
 
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,86,179,0.9), rgba(0,86,179,0.8)), url('https://example.com/fuel-truck.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b00;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #e05d00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        /* Content Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            color: #0056b3;
+            font-size: 2.3rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ff6b00;
+        }
+        
+        h3 {
+            color: #333;
+            margin: 35px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #0056b3;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background-color: #0056b3;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f1f7ff;
+        }
+        
+        .highlight {
+            background-color: #fff8e6 !important;
+            font-weight: bold;
+        }
+        
+        .testimonial-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(0,86,179,0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            margin-top: 20px;
+            color: #0056b3;
+        }
+        
+        .testimonial-company {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .stat-item {
+            padding: 30px 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .faq-section {
+            background-color: #f8f9fa;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .benefits-list {
+            margin: 30px 0;
+            padding-left: 20px;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            position: relative;
+            list-style-type: none;
+            padding-left: 30px;
+        }
+        
+        .benefits-list li:before {
+            content: '?';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .application-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #0056b3;
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .feature-card, .testimonial, .faq-item {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Vehicle Fleet Fueling</div>
+            <nav>
+                <ul>
+                    <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                    <li><a href="#savings"><i class="fas fa-chart-line"></i> Savings</a></li>
+                    <li><a href="#compare"><i class="fas fa-balance-scale"></i> Compare</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-quote-left"></i> Reviews</a></li>
+                    <li><a href="#apply" class="cta-button">Apply Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>The Ultimate Fleet Fuel Card Solution</h1>
+            <p>Join 15,000+ businesses saving an average of $1,500 per vehicle annually with our industry-leading fleet fuel card program. Get instant approval and start saving today.</p>
+            <a href="#apply" class="cta-button">Get Your Fuel Card Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+    
+    <section id="features" class="container">
+        <div class="section-title">
+            <h2>Why Vehicle Fleet Fueling is the Best Fleet Fuel Card</h2>
+            <p><br>Our comprehensive solution goes beyond just fuel discounts to give you complete control over your fleet's fuel spending.</p>
+            <p><img src="fleet-fueling-cards.jpg" width="100%" alt="" title="Fleet Fueling Cards" /></p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-gas-pump"></i>
+                </div>
+                <h3>Maximum Fuel Savings</h3>
+                <p>Save 5-30¢ per gallon at over 150,000 locations nationwide, including all major truck stops and fuel stations. Our volume discounts mean the more you use your card, the more you save.</p>
+                <ul class="benefits-list">
+                    <li>No annual fee or hidden charges</li>
+                    <li>Additional 2% cashback at participating locations</li>
+                    <li>Price protection against market spikes</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sliders-h"></i>
+                </div>
+                <h3>Advanced Spending Controls</h3>
+                <p>Eliminate fuel theft and misuse with our industry-leading controls that can be customized for each driver and vehicle in your fleet.</p>
+                <ul class="benefits-list">
+                    <li>Set daily/weekly/monthly spending limits</li>
+                    <li>Restrict purchases to fuel only (no convenience items)</li>
+                    <li>Block premium fuel purchases automatically</li>
+                    <li>Time-of-day restrictions (e.g., no fueling after hours)</li>
+                    <li>Vehicle-specific odometer requirements</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Comprehensive Reporting</h3>
+                <p>Gain unprecedented visibility into your fleet's fuel usage with real-time reporting and analytics tools.</p>
+                <ul class="benefits-list">
+                    <li>Real-time transaction monitoring</li>
+                    <li>Customizable reports by vehicle, driver, or time period</li>
+                    <li>Fuel efficiency tracking (MPG analytics)</li>
+                    <li>Exception reporting for policy violations</li>
+                    <li>Integration with QuickBooks and other accounting software</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">150,000+</div>
+                <div class="stat-label">Acceptance Locations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">30¢/gal</div>
+                <div class="stat-label">Maximum Savings</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Customer Support</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Customer Satisfaction</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="savings" class="container">
+        <div class="section-title">
+            <h2>Proven Savings for Your Fleet</h2>
+            <p><br>See how businesses like yours are reducing fuel costs and improving efficiency with our fleet fuel card program.</p>
+            <p><a href="Fleet Cards"><img src="fleet-cards.jpg" width="100%" alt="Business fleet card system showcasing efficient fuel card management with discount access, purchase controls, driver monitoring, usage analytics, and seamless integration for improved reporting and fleet fuel card solutions." title="Fleet Manager Fleet Fuel Savings" /></a></p>
+        </div>
+        
+        <h3>How We Help You Save</h3>
+        <p>The average business saves 22% on total fuel costs in the first year using FuelMaster. These savings come from multiple sources:</p>
+        
+        <div class="features-grid" style="margin-top: 30px;">
+            <div class="feature-card">
+                <h4><i class="fas fa-percentage"></i> Direct Fuel Discounts</h4>
+                <p>Our network of fuel partners provides immediate savings at the pump, with discounts that increase with your volume.</p>
+            </div>
+            <div class="feature-card">
+                <h4><i class="fas fa-ban"></i> Reduced Fraud & Misuse</h4>
+                <p>Advanced controls prevent unauthorized purchases, saving typical fleets $800-$1,200 per vehicle annually.</p>
+            </div>
+            <div class="feature-card">
+                <h4><i class="fas fa-route"></i> Optimized Routing</h4>
+                <p>Our reporting helps identify the most fuel-efficient routes and driving behaviors that waste fuel.</p>
+            </div>
+        </div>
+        
+        <h3 style="margin-top: 60px;">Case Study: Regional Delivery Fleet</h3>
+        <p>A mid-sized delivery company with 35 vehicles implemented our fuel card program and achieved:</p>
+        <ul class="benefits-list">
+            <li>27% reduction in total fuel costs ($47,000 annual savings)</li>
+            <li>Eliminated $12,000 in unauthorized purchases</li>
+            <li>Improved fuel efficiency by 9% through driver reporting</li>
+            <li>Reduced administrative time by 15 hours/week</li>
+        </ul>
+        
+        <div class="testimonial" style="margin: 50px auto; max-width: 800px;">
+            <div class="testimonial-content">
+                <p>"The FuelMaster fleet card paid for itself in the first month. Between the direct fuel discounts and finally being able to control what our drivers could purchase, we're saving over $4,000 every month. The detailed reporting also helped us identify two vehicles that needed maintenance - they were getting 20% worse mileage than similar trucks in our fleet."</p>
+                <div class="testimonial-author">Sarah K. <span class="testimonial-company">- Fleet Manager, Midwest Distribution Co.</span></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="compare" class="container">
+        <div class="section-title">
+            <h2>Compare Fleet Fuel Card Options</h2>
+            <p><br>Choose the perfect fuel card solution for your fleet's size and needs.</p>
+        </div>
+        
+        <h3>Pay-Per-Use vs. Subscription Plans</h3>
+        <p>We offer flexible pricing models to match your business requirements:</p>
+        
+        <div class="features-grid" style="margin: 30px 0;">
+            <div class="feature-card">
+                <h4><i class="fas fa-money-bill-wave"></i> Pay-Per-Use</h4>
+                <p><strong>Best for:</strong> Seasonal fleets or businesses with variable fuel needs</p>
+                <ul class="benefits-list">
+                    <li>No monthly fees</li>
+                    <li>$0.25 per transaction</li>
+                    <li>Standard fuel discounts (5-10¢/gal)</li>
+                    <li>Basic reporting included</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h4><i class="fas fa-calendar-alt"></i> Subscription</h4>
+                <p><strong>Best for:</strong> Businesses with consistent fuel needs (10+ vehicles)</p>
+                <ul class="benefits-list">
+                    <li>Monthly fee per card ($3-$8)</li>
+                    <li>Reduced transaction fees ($0.05-$0.15)</li>
+                    <li>Enhanced fuel discounts (10-30¢/gal)</li>
+                    <li>Advanced analytics and reporting</li>
+                    <li>Priority customer support</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Detailed Feature Comparison</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Feature</th>
+                <th>Basic Card</th>
+                <th>Premium Card</th>
+                <th>Enterprise Card</th>
+            </tr>
+            <tr>
+                <td>Monthly Fee</td>
+                <td>$0</td>
+                <td>$5/card</td>
+                <td>$3/card*</td>
+            </tr>
+            <tr>
+                <td>Transaction Fee</td>
+                <td>$0.25</td>
+                <td>$0.10</td>
+                <td>$0.05</td>
+            </tr>
+            <tr>
+                <td>Fuel Discount</td>
+                <td>5-10¢/gal</td>
+                <td>10-20¢/gal</td>
+                <td>15-30¢/gal</td>
+            </tr>
+            <tr>
+                <td>Spending Controls</td>
+                <td>Basic</td>
+                <td>Advanced</td>
+                <td>Custom</td>
+            </tr>
+            <tr>
+                <td>Reporting</td>
+                <td>Standard</td>
+                <td>Enhanced</td>
+                <td>Custom Analytics</td>
+            </tr>
+            <tr>
+                <td>Customer Support</td>
+                <td>Business Hours</td>
+                <td>24/7 Phone</td>
+                <td>Dedicated Account Manager</td>
+            </tr>
+            <tr class="highlight">
+                <td>Best For</td>
+                <td>1-5 vehicles</td>
+                <td>5-25 vehicles</td>
+                <td>25+ vehicles</td>
+            </tr>
+        </table>
+        <p style="font-size: 0.9rem; margin-top: 10px;">* Volume discount applies for fleets with 50+ cards</p>  
+        <p><img src="fleet-fuel-card-providers.jpg" width="100%" alt="Fleet fuel card for business vehicles showing fuel card usage, driver tracking, transaction monitoring, payment limits, and expense control at network stations with integrated analytics and reporting solutions." title="Top Fleet Fuel Card Providers" /></P>
+        
+        <h3 style="margin-top: 60px;">Unlimited vs. Tiered Cashback & Card Rewards</h3>
+        <p>Choose the rewards program that works best for your fleet:</p>
+        
+        <div class="features-grid" style="margin: 30px 0;">
+            <div class="feature-card">
+                <h4><i class="fas fa-infinity"></i> Unlimited 1% Cashback</h4>
+                <p><strong>Benefits:</strong></p>
+                <ul class="benefits-list">
+                    <li>Simple, predictable rewards</li>
+                    <li>No minimum spending requirements</li>
+                    <li>Earn on every gallon purchased</li>
+                    <li>Automatic quarterly payouts</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h4><i class="fas fa-layer-group"></i> Tiered Cashback</h4>
+                <p><strong>Benefits:</strong></p>
+                <ul class="benefits-list">
+                    <li>Earn 1-3% based on monthly volume</li>
+                    <li>Higher rewards for loyal customers</li>
+                    <li>Bonus tiers at 10k, 25k, 50k gallons</li>
+                    <li>Combines with fuel discounts</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="testimonial-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p><br>Don't just take our word for it - hear from businesses that use FuelMaster every day.</p> 
+                <p><img src="fuel-card.jpg" width="100%" alt="Fleet fuel cards offering savings, convenience, and security for fleet management, enabling businesses to control fuel purchases, monitor driver usage, and integrate tracking of expenses and transactions across multiple stations." title="Fuel Card Solutions" /></p>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"We switched to FuelMaster after using another provider for years. The difference in customer service and reporting capabilities is night and day. Our fuel costs dropped 18% in the first quarter, and our drivers actually prefer the card because it works at more locations."</p>
+                        <div class="testimonial-author">James R. <span class="testimonial-company">- Owner, Coastal Trucking</span></div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"As a non-profit with a small fleet, every dollar counts. FuelMaster's prepaid option let us get started without a credit check, and the controls prevent any misuse of our limited funds. We've been able to redirect $9,000 annually back to our programs."</p>
+                        <div class="testimonial-author">Maria L. <span class="testimonial-company">- Director, Hope Community Services</span></div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The detailed MPG reporting helped us identify three underperforming vehicles in our 75-truck fleet. After maintenance, they improved by 2.3 MPG - saving us $28,000 per year. The fuel discounts are great, but the data is even more valuable."</p>
+                        <div class="testimonial-author">David W. <span class="testimonial-company">- VP Operations, Statewide Logistics</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="apply" class="container">
+        <div class="section-title">
+            <h2>Simple Application Process</h2>
+            <p><br>Get approved for your fleet fuel card in as little as 10 minutes.</p>
+        </div>
+        
+        <div class="application-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Create Account</h4>
+                <p>Basic business information and primary contact details.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Select Plan</h4>
+                <p>Choose the card type and features that match your needs.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Add Vehicles</h4>
+                <p>Enter your fleet details (can be updated later).</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Get Approved</h4>
+                <p>Instant approval for most small fleets.</p>
+            </div>
+        </div>
+        
+        <h3>Instant Approval for Small Fleets</h3>
+        <p>Businesses with 1-10 vehicles typically receive instant approval with just basic business information. No lengthy paperwork or credit checks required for our basic plans.</p>
+        
+        <h3>No Credit Check Options</h3>
+        <p>Our prepaid fleet fuel cards are perfect for:</p>
+        <ul class="benefits-list">
+            <li>New businesses without established credit</li>
+            <li>Companies rebuilding credit</li>
+            <li>Organizations that prefer pay-as-you-go</li>
+            <li>Seasonal operations that need flexibility</li>
+        </ul>
+        
+        <div style="text-align: center; margin: 60px 0 40px;">
+            <a href="#apply" class="cta-button">Start Your Application Now <i class="fas fa-arrow-right"></i></a>
+            <p style="margin-top: 15px; font-size: 0.9rem;">No obligation - approval in minutes</p>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p><br>Everything you need to know about fleet fuel cards.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>What makes FuelMaster different from other fleet fuel cards?</h3>
+                    <p>Unlike many competitors, we offer three key advantages: (1) Higher fuel discounts that increase with your volume, (2) More comprehensive spending controls that can be customized per vehicle/driver, and (3) Advanced reporting that actually helps you reduce fuel consumption, not just track it. Plus, our customer service is U.S.-based and available 24/7.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Are there any hidden fees with your fuel cards?</h3>
+                    <p>No hidden fees. All charges are clearly disclosed upfront. Some cards have monthly fees (waived for certain volume levels), and all have small transaction fees (typically $0.05-$0.25) that are more than offset by fuel savings. We never charge application fees, account maintenance fees, or statement fees.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Where can I use my FuelMaster fleet card?</h3>
+                    <p>Accepted at over 95% of fuel stations nationwide, including all major brands like Shell, Chevron, Exxon, Pilot, Love's, and more. Our mobile app includes a station locator with real-time pricing and in-network discounts. International use is available with our Premium and Enterprise cards.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How quickly can I get cards for my entire fleet?</h3>
+                    <p>Most customers receive their first cards within 3-5 business days after approval. Large fleets (50+ cards) typically receive shipments within 7-10 days. Digital card numbers are available immediately upon approval for urgent needs.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I integrate the fuel card data with my accounting software?</h3>
+                    <p>Yes, we offer direct integrations with QuickBooks, Xero, and other major accounting platforms. You can also export transaction data in CSV, Excel, or XML formats for custom integrations. Our Enterprise plan includes API access for real-time data synchronization.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What happens if a card is lost or stolen?</h3>
+                    <p>Immediately freeze the card through our mobile app or customer service line. We offer $0 fraud liability protection, meaning you're never responsible for unauthorized charges. Replacement cards typically arrive within 2-3 business days.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container" style="text-align: center; padding: 80px 0;">
+        <h2>Ready to Reduce Your Fleet Fuel Costs?</h2>
+        <p style="max-width: 700px; margin: 20px auto 30px; font-size: 1.2rem;">Join thousands of businesses that trust FuelMaster for their fleet fueling needs. Get started today with no obligation and see how much you could save.</p>
+        <a href="#apply" class="cta-button">Get Your Fuel Cards Now <i class="fas fa-arrow-right"></i></a>
+        
+        <div style="margin-top: 60px;">
+            <h3>24/7 Customer Support</h3>
+            <p>Have questions? Our fuel card specialists are available around the clock to help you choose the right program.</p>
+            <p><i class="fas fa-phone" style="margin-right: 10px;"></i> 1-800-FUEL-CARD</p>
+            <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> support@fuelmaster.com</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Vehicle Fleet Fueling</h3>
+                    <p>Industry-leading fleet fuel card solutions since 2008. Helping businesses of all sizes save on fuel costs and simplify fleet management.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#savings">Savings Calculator</a></li>
+                        <li><a href="#compare">Compare Cards</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#apply">Apply Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Fuel Management Guide</a></li>
+                        <li><a href="#">Fleet Efficiency Tips</a></li>
+                        <li><a href="#">Industry Reports</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="+1-800-FUEL-CARD">1-800-FUEL-CARD</a></li>
+                        <li><a href="mailto:">sales@fuel-master.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Vehicle Fleet Fueling. All rights reserved. | <a href="privacy-policy.html" style="color: #aaa;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #aaa;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
